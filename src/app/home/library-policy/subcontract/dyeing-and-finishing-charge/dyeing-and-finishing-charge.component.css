@@ -1,0 +1,72 @@
+/* tbody{
+  display: block; */
+  /* height: 200px;
+  overflow: scroll; */
+/* }
+thead,tbody tr{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+} */
+thead {
+  background-color: #3dabf5!important;
+  color: #fff!important;
+  width: calc( 100% -0.5em)/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+v::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: white;
+}
+
+
+table {
+  overflow: scroll;
+}
+table td{
+  padding: .25rem;
+  padding-top: .50rem !important;
+  padding-bottom: .50rem !important;
+  border: 0.10px solid #3dabf5;
+}
+table th{
+  padding: .25rem;
+  padding-top: .50rem !important;
+  padding-bottom: .50rem !important;
+  border: 0.10px solid rgb(16, 83, 170);
+}
+table{
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+td .form-control {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: center;
+  background: rgb(244, 245, 245);
+  border-radius: 0;
+  border: 1px solid #fff;
+}
+
+td .form-control:focus {
+  background: whitesmoke;
+  border: 1px dotted rgb(242, 245, 245);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

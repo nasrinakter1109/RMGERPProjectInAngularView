@@ -1,0 +1,128 @@
+/* tbody{
+  display: block; */
+  /* height: 200px;
+  overflow: scroll; */
+/* }
+thead,tbody tr{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+} */
+thead {
+  background-color: #3dabf5!important;
+  color: #fff!important;
+  width: calc( 100% -0.5em)/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+v::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: white;
+}
+.transTable {
+  max-width: 1300px;
+  overflow-x: scroll;
+}
+
+table {
+  overflow: scroll;
+}
+.tableNo1 td{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid #3dabf5;
+}
+.tableNo1 th{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid rgb(16, 83, 170);
+}
+.tableNo3 td{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid #3dabf5;
+}
+.tableNo3 th{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid rgb(16, 83, 170);
+}
+/* .tableNo3 tbody{
+  display: block;
+  height: 100px;
+  overflow: scroll;
+ }
+ .tableNo3 thead,tbody tr{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+} */
+
+table{
+  text-align: center; color: white;
+  font-size: 14px;
+}
+
+
+.tblShort td,th{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid #3dabf5;
+}
+
+
+.tableNo2 th{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid rgb(16, 83, 170);
+}
+.tableNo2 td{
+  padding: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0.10px solid #3dabf5;
+}
+/* table th,
+td {
+    vertical-align: middle;
+}
+th{
+  padding: 0;
+}
+td {
+    padding: 0;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+} */
+td .form-control {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: center;
+  background: rgb(244, 245, 245);
+  border-radius: 0;
+  border: 1px solid #fff;
+}
+
+td .form-control:focus {
+  background: whitesmoke;
+  border: 1px dotted rgb(242, 245, 245);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

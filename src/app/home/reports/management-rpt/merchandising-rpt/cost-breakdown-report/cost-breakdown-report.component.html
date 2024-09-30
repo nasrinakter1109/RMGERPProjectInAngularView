@@ -1,0 +1,303 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="text-center">Cost Breakdown Report</h2>
+  </div>
+  <div class="card-body">
+    <div class="col-md-8" style="margin: auto;">
+      <div class="row  mx-1 center  p-2 " (click)="onSearchPanel()" style="background-color:#3dabf5 ;margin: auto;">
+        <span   style="color: white;" >-Search Panel</span>
+      </div>
+      <div class="card mt-2" style="margin: auto;" *ngIf="isSearchPanelOpen">
+        <div class="card-body p-0 py-2"  >
+          <div class="data-table p-0" >
+            <table class="table p-0" style="max-width: 100%;margin: auto;">
+              <thead>
+                <tr>
+                  <th>Company Name</th>
+                  <th>Buyer Name</th>
+                  <th>Team</th>
+                  <th>Team Member</th>
+                  <th>Order Booking No</th>
+                  <th>Shipment Date</th>
+                  <th>Reset</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><select class="form-control">
+                    <option selected>--Select Company--</option>
+                    <option > Company-1</option>
+                    <option > Company-2</option>
+                    <option > Company-3</option>
+                  </select></td>
+                  <td><select class="form-control">
+                    <option selected>--Select Buyer--</option>
+                    <option > Buyer-1</option>
+                    <option > Buyer-2</option>
+                    <option > Buyer-3</option>
+                  </select></td>
+                  <td><select class="form-control">
+                    <option selected>--Select Team--</option>
+                    <option > Team-1</option>
+                    <option > Team-2</option>
+                    <option > Team-3</option>
+                  </select></td>
+                  <td><select class="form-control">
+                    <option selected>--Team Meamber--</option>
+                    <option > Member-1</option>
+                    <option > Member-2</option>
+                    <option > Member-3</option>
+                  </select></td>
+                  <td><input class="form-control"></td>
+                  <td><div class="ml-3">
+                    <input type="date" placeholder="From Date" class="form-control" style="width:120px;"> <span>To</span> <input type="date" placeholder="To Date" class="form-control" style="width:120px;">
+                  </div></td>
+                  <td><button (click)="onShow()" class="btn btn-primary">Show</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-10 mt-3" style="margin: auto;">
+            <select class="mx-1">
+              <option>2021</option>
+              <option>2022</option>
+              <option>2023</option>
+              <option>2024</option>
+            </select>
+            <button class="mx-1 btn" style="background-color: #256e9e;color: white;">Jan</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Feb</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Mar</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Apr</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">May</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Jun</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Jul</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Aug</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Sep</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Oct</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Nov</button>
+            <button class="mx-1 btn" style="background-color: #256e9e;color:white">Dec</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="isShowBtnPress">
+      <div class="col-md-12" >
+        <div class="row col-md-3" style="margin: auto;">
+          <label class=" font-weight-bold mt-2">Convert To</label>
+            <button class="btn btn-primary mx-2"> Excel Preview</button>
+            <button class="btn btn-primary"> HTML Preview</button>
+        </div>
+        <div class="card">
+          <div class="card-body p-0 m-0" >
+            <div class="data-table mb-0 p-0 " style="width: 100%;height: 400px;;overflow: scroll;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>SL</th>
+                    <th>ID</th>
+                    <th>Comp.</th>
+                    <th>Buyer</th>
+                    <th>Agent</th>
+                    <th>Style Dese</th>
+                    <th>Season</th>
+                    <th>Image</th>
+                    <th>Prod. Dept</th>
+                    <th>Offered Qnty</th>
+                    <th>UOM</th>
+                    <th>Est. Ship Date</th>
+                    <th>Status</th>
+                    <th>Fabric Cost/Dzn</th>
+                    <th>Trims Cost/Dzn</th>
+                    <th>Embel. Cost/Dzn</th>
+                    <th>Gmts Wash.Cost/Dzn</th>
+                    <th>CM Cost/Dzn</th>
+                    <th>Other Cost/Dzn</th>
+                    <th>Total Cost/Dzn</th>
+                    <th>Cost/Pcs</th>
+                    <th>Asking Price/Pcs</th>
+                    <th>Conf. Price/Pcs</th>
+                    <th>Margin/Pcs</th>
+                    <th>Comm.</th>
+                    <th>Remarks</th>
+                  </tr>
+                  <tr>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"> </th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                    <th><input class="form-control" placeholder="Search"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.main-sidebar{
+  max-height: 85vh !important;
+  font-size: 14px;
+   /* background-color: rgb(15, 171, 238); */
+}
+
+.content-wrapper{
+ max-height: 84vh !important;overflow-y: auto;
+
+}
+
+@media screen and (max-width: 1376px) {
+
+  .content-wrapper {
+       height: 70vh !important;
+       /* min-height: 700px !important; */
+      max-height: 77vh !important;
+  }
+  /* .main-sidebar{
+      max-height: 85vh !important;
+  } */
+
+}

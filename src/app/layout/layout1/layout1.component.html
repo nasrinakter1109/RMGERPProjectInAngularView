@@ -1,0 +1,91 @@
+<div class="layout-wrapper wrapper  layout-1" [ngClass]="{'layout-loading': !initialized}" >
+  <header class="main-header" style="max-height: 100px;">
+    <div class="col-md-12 row "  style="max-height: 100px;" >
+      <div  class="col-md-10 mt-1" style="max-height: 45px;">
+          <img   src="/assets/image/zaynax.png" class="image" style="max-height: 45px;" > </div>
+          <div  class="col-md-2 mt-1 " >
+                    <span >{{userName}} </span> <span class="mx-2">| </span>
+                  <a href="javascript:void(0)" (click) = "logout()" ><i class="ion ion-ios-log-out text-danger mx-2"></i> Log Out</a>
+
+            </div>
+    </div>
+    <!-- Header Navbar -->
+    <div class="row" style="background-color: rgb(0, 174, 255); " >
+      <!-- Header Navbar -->
+      <nav  role="navigation"  >
+        <!-- Sidebar toggle button-->
+
+        <!-- Navbar Right Menu -->
+        <div class="navbar p-0" >
+          <a href="javascript:void(0)" (click)="sideberCollapse()" class="sidebar-toggle  ml-5 my-0 " data-toggle="offcanvas" role="button" style="color: black;">
+             <!-- <span class="navbar-toggler-icon">Toggle navigation</span> -->
+          </a>
+        <!-- <ul class="navbar " [ngClass]="{ 'py-1': orientation !== 'horizontal' }"> -->
+          <!-- <li class="navbar-item "  [class.active]="true"  > -->
+           <a  class="mx-2" [routerLink]="'/Reports/dashboard'" ><i  >
+                </i> <span (click)="onModuleClick(1)" style="color: white;">Reports</span> </a>
+              <!-- </li> -->
+                <!-- <li  [class.active]="true"  > -->
+                  <a class="mx-2" [routerLink]="'/library/dashboard'" ><i  >
+           </i> <span (click)="onModuleClick(2)" style="color: white;">Library(Policy)</span> </a>
+          <!-- </li> -->
+           <!-- <li  [class.active]="true"  > -->
+            <a class="mx-2" [routerLink]="'/Merchandising/dashboard'" ><i  >
+                 </i> <span (click)="onModuleClick(3)" style="color: white;">Merchandising</span> </a>
+                <!-- </li> -->
+                 <!-- <li  [class.active]="true"  > -->
+                  <a class="mx-2" [routerLink]="'/TNA/dashboard'" ><i  >
+                </i> <span (click)="onModuleClick(4)" style="color: white;">TNA</span> </a>
+                <!-- </li> -->
+                  <!-- <li  [class.active]="true"  > -->
+               <a class="mx-2" [routerLink]="'/IE/dashboard'" ><i  >
+              </i> <span (click)="onModuleClick(5)" style="color: white;">IE</span> </a>
+        <!-- </li> -->
+         <!-- <li  [class.active]="true"  > -->
+               <a class="mx-2" [routerLink]="'/Commercial/dashboard'" ><i  >
+               </i> <span (click)="onModuleClick(6)" style="color: white;">Commercial</span> </a>
+              <!-- </li> -->
+               <!-- <li  [class.active]="true"  > -->
+              <a class="mx-2" [routerLink]="'/Production/dashboard'" ><i  >
+             </i> <span (click)="onModuleClick(7)" style="color: white;">Production</span> </a>
+           <!-- </li> -->
+             <!-- <li  [class.active]="true"  > -->
+              <a class="mx-2" [routerLink]="'/Accounting/dashboard'" ><i  >
+             </i> <span (click)="onModuleClick(8)" style="color: white;">Accounting</span> </a>
+             <!-- </li> -->
+              <!-- <li  [class.active]="true"  > -->
+              <a class="mx-2" [routerLink]="'/Subcontract/dashboard'" ><i  >
+          </i> <span (click)="onModuleClick(9)" style="color: white;">Subcontract</span> </a>
+                  <!-- </li> -->
+             <!-- <li  [class.active]="true"  > -->
+                 <a class="mx-2" [routerLink]="'/Inventory/dashboard'" ><i  >
+               </i> <span (click)="onModuleClick(10)" style="color: white;">Inventory/Store</span> </a>
+              <!-- </li> -->
+                    <!-- <li  [class.active]="true"  > -->
+                 <a class="mx-2" [routerLink]="'/Approval/dashboard'" ><i  >
+                </i> <span (click)="onModuleClick(11)" style="color: white;">Approval</span> </a>
+                         <!-- </li> -->
+              <!-- </ul> -->
+            </div>
+
+      </nav>
+    </div>
+  </header>
+  <div  class="main-sidebar" >
+    <div  style="height:866px; background-color: rgb(21, 98, 150);" > <app-layout-sidenav ></app-layout-sidenav></div>
+<!-- <app-layout-sidenav ></app-layout-sidenav> -->
+   </div>
+
+   <div class="content-wrapper" style="margin-top: -1px !important; min-height: 84vh !important;">
+    <!-- width: 100% !important; -->
+    <router-outlet></router-outlet>
+   </div>
+   <footer style="background-color: rgb(49, 54, 80);padding: 15px">
+    <app-layout-footer class="main-footer" style="padding: 0;border: none;"></app-layout-footer>
+   </footer>
+
+      <!-- </div> -->
+
+  <div class="control-sidebar-bg"></div>
+</div>
+

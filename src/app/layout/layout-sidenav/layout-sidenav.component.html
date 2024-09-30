@@ -1,0 +1,68 @@
+<section class="sidebar"  >
+  <div class=" well" *ngIf="PageList.length>0">
+    <ul class=" m-0 pl-2" *ngFor="let modPage of PageList; let x=index">
+      <li
+        class=" page-list py-1" >
+        <a [routerLink]="modPage.rout_url ? modPage.rout_url:undefined" style="color: white;">
+        <span  class="fa fa-caret-right" ></span>
+         <label >{{modPage.name}}</label></a>
+
+      </li>
+    </ul>
+  </div>
+  <div class=" well" *ngIf="SideBarMenusList.length>0">
+<ul *ngFor="let module of SideBarMenusList; let i=index" class="m-0 pl-0 sidebar-menu" >
+  <li class=" module-list py-1 pl-2"  >
+    <span (click)="onMainMenuToggle('span'+i)"  [attr.href]="'#module'+i" data-toggle="collapse"
+      class="fas fa-plus-circle" [id]="'span'+i" ></span>
+      <label  [for]="'moduleCheck'+i">{{module.name}}
+        </label>
+
+  </li>
+  <!-- Sub-Module -->
+  <ul *ngFor="let subMod of module.subMenu; let j=index" class="m-0 pl-0 ml-2">
+    <li class=" collapse subModule-list py-1 " [id]="'module'+i">
+      <span  (click)="onMainMenuToggle('span'+i+''+j)" [attr.href]="'#subMod'+i+''+j" data-toggle="collapse"
+        class="fas fa-plus-circle" [id]="'span'+i+''+j" ></span>
+        <label [for]=" 'subModCheck'+i+''+j">{{subMod.name}}</label>
+    </li>
+    <!-- Sub-Module-Page -->
+     <ul class=" ml-2 pl-0" >
+      <li *ngFor="let subModPage of subMod.subMenu; let k=index"
+        class=" collapse page-list py-2" [id]="'subMod'+i+''+j" >
+        <span  class="fa fa-caret-right" ></span>
+              <label [for]="'subMod3Check'+i+''+j+''+k">{{subModPage.name}}</label>
+      </li>
+    </ul>
+           <!-- Sub-Module-Page -->
+           <ul class=" m-0 pl-4">
+            <li *ngFor="let subModPage of subMod.pages; let k=index"
+              class=" collapse page-list py-1" [id]="'subMod'+i+''+j">
+              <a [routerLink]="subModPage.rout_url ? subModPage.rout_url:undefined" style="color: white;">
+              <span  class="fa fa-caret-right" ></span>
+            <label
+              [for]="'subModPageCheck'+i+''+j+''+k">{{subModPage.name}}</label></a>
+
+
+            </li>
+          </ul>
+  </ul>
+
+<!--Pagess-->
+<ul class=" m-0 pl-3">
+  <li *ngFor="let modPage of module.pages; let x=index"
+    class="collapse page-list py-1" [id]="'module'+i">
+    <a [routerLink]="modPage.rout_url ? modPage.rout_url:undefined" style="color: white;">
+    <span  class="fa fa-caret-right" ></span>
+     <label [for]="'modPageCheck'+i+''+x">{{modPage.name}}</label></a>
+
+  </li>
+</ul>
+
+
+</ul>
+    <!--PagesList without module-->
+
+</div>
+
+</section>
